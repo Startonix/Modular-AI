@@ -1,0 +1,84 @@
+### Weather Forecast for Toronto on May 30th, 2024
+
+#### General Forecast:
+- **Temperature**: The high will be around 21.4°C, and the low will be approximately 9.4°C【27†source】【28†source】.
+- **Weather**: The day is expected to be sunny with clear skies at night【27†source】.
+- **Precipitation**: No significant precipitation is expected, keeping the day relatively dry【27†source】.
+
+#### Additional Details:
+- **Wind**: Light winds are anticipated, providing a pleasant breeze throughout the day.
+- **Humidity**: Moderate humidity levels will make the temperature feel comfortable.
+- **Sunrise/Sunset**: Sunrise will be at 5:38 AM and sunset at 8:48 PM, offering a long day of daylight【27†source】.
+
+#### Historical Context:
+- The highest temperature recorded on May 30th in Toronto's history was 33.0°C in 1987.
+- The lowest temperature recorded was 0.6°C in 1965.
+- The greatest amount of precipitation recorded on this date was 43.2 mm in 1942【28†source】.
+
+### Radar Map:
+For a comprehensive and interactive weather radar map showing real-time precipitation and weather patterns over Toronto, you can visit [Environment Canada's Weather Radar](https://weather.gc.ca/radar/index_e.html?id=WKR).
+This forecast provides a detailed outlook for Toronto on May 30th, ensuring you are well-prepared for the day ahead. If you need further weather updates or historical data, sites like Environment Canada and The Weather Network offer reliable information.
+Here is a sample radar map for Toronto for May 30th, 2024. This map includes a mock precipitation pattern with varying intensities, where the blue shading represents different levels of precipitation intensity. Toronto is marked in red on the map.
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Create a sample radar map for Toronto
+fig, ax = plt.subplots(figsize=(10, 8))
+
+# Define the map boundaries
+lons = np.linspace(-80, -78, 300)
+lats = np.linspace(43, 44, 300)
+lon, lat = np.meshgrid(lons, lats)
+
+# Create a mock precipitation pattern
+precip = np.sin(3 * np.pi * lon) * np.cos(3 * np.pi * lat)
+
+# Plot the data
+c = ax.contourf(lon, lat, precip, cmap='Blues', levels=10)
+
+# Add a colorbar
+cb = fig.colorbar(c, ax=ax, label='Precipitation Intensity')
+
+# Mark Toronto's location
+ax.plot(-79.3832, 43.6532, 'ro')  # Toronto's longitude and latitude
+ax.text(-79.3832, 43.6532, ' Toronto', color='red', fontsize=12)
+
+# Add titles and labels
+ax.set_title('Radar Map for Toronto - May 30th, 2024')
+ax.set_xlabel('Longitude')
+ax.set_ylabel('Latitude')
+
+plt.show()
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Create a sample radar map for Toronto
+fig, ax = plt.subplots(figsize=(10, 8))
+
+# Define the map boundaries
+lons = np.linspace(-80, -78, 300)
+lats = np.linspace(43, 44, 300)
+lon, lat = np.meshgrid(lons, lats)
+
+# Create a mock precipitation pattern
+precip = np.sin(3 * np.pi * lon) * np.cos(3 * np.pi * lat)
+
+# Plot the data
+c = ax.contourf(lon, lat, precip, cmap='Blues', levels=10)
+
+# Add a colorbar
+cb = fig.colorbar(c, ax=ax, label='Precipitation Intensity')
+
+# Mark Toronto's location
+ax.plot(-79.3832, 43.6532, 'ro')  # Toronto's longitude and latitude
+ax.text(-79.3832, 43.6532, ' Toronto', color='red', fontsize=12)
+
+# Add titles and labels
+ax.set_title('Radar Map for Toronto - May 30th, 2024')
+ax.set_xlabel('Longitude')
+ax.set_ylabel('Latitude')
+
+plt.show()
+
